@@ -27,8 +27,8 @@ def main() -> None:
             print(f"Skipped {image_path.name}: {error}")
             continue
 
-        output_path = OUTPUT_DIR / f"{image_path.stem}.jpg"
-        formatted.save(output_path, "JPEG", quality=92, optimize=True, progressive=True)
+        output_path = OUTPUT_DIR / f"{image_path.stem}.png"
+        formatted.save(output_path, "PNG", optimize=True)
 
         processed += 1
         print(f"Done: {image_path.name} -> {output_path} ({formatted.width}x{formatted.height})")
