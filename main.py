@@ -48,7 +48,6 @@ def format_image(image_path: Path) -> Image.Image:
 
     return image
 
-
 def enhance_manager_image(image: Image.Image) -> Image.Image:
     image = ImageEnhance.Color(image).enhance(1.16)
     image = ImageEnhance.Contrast(image).enhance(1.08)
